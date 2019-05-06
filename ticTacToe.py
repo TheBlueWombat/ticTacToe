@@ -15,21 +15,17 @@ def printBoard(board):
     print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
 
 
-def checkWinner(board):
-    ttVals = []
-    ttFinal = []
+def ValsList(board):
+    tt = []
     inner = []
 
-    for v in board.values():
-        ttVals.append(v)
-
-    for i in range(len(ttVals)):
-        inner.append(ttVals[i])
+    for i in range(len(board)):
+        inner.append(list(theBoard.values())[i])
         if (i+1) % 3 == 0:
-            ttFinal.append(inner)
+            tt.append(inner)
             inner = []
 
-    print(ttFinal)
+    print(tt)
 
 
 turn = 'X'
@@ -44,4 +40,5 @@ for i in range(9):
         turn = 'X'
 
 printBoard(theBoard)
-checkWinner(theBoard)
+print()
+ValsList(theBoard)
