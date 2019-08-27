@@ -1,7 +1,6 @@
 # ticTacToe
 Python Project: tic tac toe game
-The dictionary to represent the board came from a book. the logic for checking for a winner and 
-anything beyond that is my own. 
+
 
 ```
 def checkWinner(board):
